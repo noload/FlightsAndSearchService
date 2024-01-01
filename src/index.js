@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const {PORT} = require('./config/serverConfig')
-
+const  ApiRoute = require('./routes/index');
 
 const setupAndStartServer = async ()=>{
 
@@ -11,7 +11,7 @@ const setupAndStartServer = async ()=>{
     // middleware
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended:true}));
-
+    app.use('/api',ApiRoute);
    
    
     app.listen(PORT,()=>{
