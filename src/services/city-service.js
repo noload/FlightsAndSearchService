@@ -38,10 +38,21 @@ class CityService{
         }
     }
 
-    async getCity(cityId){
+    async getCityDetail(cityId){
         try {
             const city = this.cityRepository.getCity(cityId);
             return city;
+        } catch (error) {
+            console.log("service layer error");
+            throw {error}
+        }
+    }
+
+    async getAllCities(){
+        try {
+            const city = this.cityRepository.getAllCities();
+            return city;
+
         } catch (error) {
             console.log("service layer error");
             throw {error}
