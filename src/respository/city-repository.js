@@ -70,6 +70,15 @@ class CityRepository{
         }
     }
 
+    async addCities(data){
+     try {
+        const allCities = City.bulkCreate(data);
+        return allCities;
+     } catch (error) {
+        console.log("something went wrong");
+        throw {error}
+     }   
+    }
 
     async getCity(cityId){
         try {

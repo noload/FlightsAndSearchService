@@ -13,7 +13,8 @@ router.get('/city/:id',CityController.get);
 
 router.get('/city',CityController.getAll);
 
-
+router.post('/city/add',CityController.addAll);
 
 router.patch('/city/:id',CityController.update);
+
 module.exports = router;
