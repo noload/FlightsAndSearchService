@@ -19,6 +19,7 @@ class CityRepository{
                     id:cityId
                 }
             });
+            return true;
         } catch (error) {
             throw{error}
         }
