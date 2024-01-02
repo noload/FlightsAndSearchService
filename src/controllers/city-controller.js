@@ -118,7 +118,7 @@ const addAll =async (req,res)=>{
             data:{},
             success:false,
             message:"Not able to add cities",
-            err:error.error
+            err:error.message
         })
     }
 }
