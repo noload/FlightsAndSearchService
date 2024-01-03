@@ -3,6 +3,8 @@ const CityController = require("../../controllers/city-controller");
 const FlightController = require("../../controllers/flight-controller");
 const AirportController = require("../../controllers/airport-controller");
 
+const { FlightMidddleware } = require("../../middlewares/index");
+
 const router = express.Router();
 
 router.post("/city", CityController.create);
